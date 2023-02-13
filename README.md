@@ -1,4 +1,4 @@
-# Basketball Stats
+# 🏀 Basketball Stats
 ### By Isaac Katayev
 
 This is the source code for my site that was made for my math research paper. 
