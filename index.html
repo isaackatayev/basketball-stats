@@ -3,10 +3,59 @@
     <head>
         <title>Basketball Stats - By Isaac Katayev</title>
         <link rel="stylesheet" href="styles/index.css">
-
+        <meta charset="UTF-8">
     </head>
     <body>
-
+<h1>🏀 Basketball Stats</h1>
+<h2>By Isaac Katayev</h2>
+<div>
+    <h3>Calculating Basketball Salary (Simple Player Value)</h3>
+    <h6>Using partial stats from the 2022-2023 NBA Season, players aged 27+</h6>
+    <form>
+        <label for="points">Points:</label><br>
+        <input type="text" id="points" name="points" value=""><br>
+        <label for="assists">Assists:</label><br>
+        <input type="text" id="assists" name="assists" value=""><br>
+        <label for="rb">Total Rebounds:</label><br>
+        <input type="text" id="rb" name="rb" value=""><br>
+        <label for="st">Steals:</label><br>
+        <input type="text" id="st" name="st" value=""><br>
+        <label for="bk">Blocks:</label><br>
+        <input type="text" id="bk" name="bk" value=""><br>
+        <label for="to">Turnovers:</label><br>
+        <input type="text" id="to" name="to" value=""><br><br>
+        <button type="button" onclick="window.spv()" >Calculate</button>
+        <p id="spvr"> </p>
+      </form> 
+</div>
+<div>
+    <h3>Calculating Basketball Salary (Fantasy Player Value)</h3>
+    <h6>Using partial stats from the 2022-2023 NBA Season, players aged 27+, <a href="https://www.espn.com/fantasy/basketball/story/_/id/30296896/espn-fantasy-default-points-league-scoring-explained">Learn About Fantasy Player Value</a></h6>
+    <form>
+        <label for="fpv">Fantasy Points:</label><br>
+        <input type="text" id="fpv" name="fpv" value=""><br><br>
+        
+        <button type="button" onclick="window.fpv(document.getElementById('fpv').value)">Calculate</button>
+        <p id="fpvr"> </p>
+      </form> 
+</div>
+<div>
+    <h3>Information about a Basketball's trajectory</h3>
+    <h6>Assuming ball is shot at 45 degrees (most efficient). Force assumes the ball is 566 grams. Gravity is 32.17ft/s.</a></h6>
+    <form>
+        <label for="h">Ball's Height:</label><br>
+        <input type="text" id="h" name="h" value="" placeholder="in feet"><br>
+        <label for="l">Distance from center of ball to center of hoop:</label><br>
+        <input type="text" id="l" name="l" value="" placeholder="in feet"><br>
+        <label for="rh">Rim Height:</label><br>
+        <input type="text" id="rh" name="rh" value="" placeholder="in feet"><br>
+        
+        <br>
+        
+        <button type="button" onclick="window.trajectory()">Calculate</button>
+        <p id="trr"> </p>
+      </form> 
+</div>
     </body>
     <script src="scripts/index.js"></script>
     </html>
